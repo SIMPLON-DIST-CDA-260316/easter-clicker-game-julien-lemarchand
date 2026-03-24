@@ -8,22 +8,32 @@
     <script type="module" src="./script.js" defer></script>
   </head>
   <body>
-    <div class="content_container">
-        <h1>Easter Egg Challenge</h1>
-        <div class="HUD">
-            <div class="controls">
-                <button class="start_pause custom-btn">Start</button>
-                <button class="reset custom-btn">Reset</button>
-            </div>
-            <div class="display">
-                <div class="timer">00:00</div>
-                <div class="counter">000</div>
-            </div>
+    <div class="content-container">
+      <h1>Easter Egg Challenge</h1>
+
+      <div id="game-frame" class="game-frame">
+        <!-- spawn during game -->
+        <button class="egg choco"></button>
+        <button class="egg gold"></button>
+        <button class="egg poisoned"></button>
+      </div>
+      <div id="hud" class="HUD-container">
+        <div class="controls">
+          <button id="btn-stop" class="stop custom-btn">Start/Stop</button>
+          <button id="btn-reset" class="reset custom-btn">Reset</button>
+          <select name="difficulties" id="diff-select">
+            <option value="easy">Petit poussin (facile)</option>
+            <option value="medium">Lapin malin (intermédiaire)</option>
+            <option value="hard">Chasseur d’œufs (difficile)</option>
+          </select>
         </div>
-        <div class="game_frame">
-             <button class="egg choco"></button>
-             <button class="egg gold"></button>
+        <div class="display-container">
+          <label for="timer">Temps restant</label>
+          <input id="timer" name="timer" class="timer" type="text" value="00:00" readonly></input>
+          <label for="score">Score</label>
+          <input id="score" name="score" class="score" type="number" value="0" readonly>000</input>
         </div>
+      </div>
     </div>
   </body>
 </html>

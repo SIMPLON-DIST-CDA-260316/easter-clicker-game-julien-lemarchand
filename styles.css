@@ -130,9 +130,8 @@ table {
 /* ----------------------------- */
 body {
   padding: 0 5%;
-}
-
-h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
 }
 
 .custom-btn {
@@ -140,8 +139,6 @@ h1 {
   height: 40px;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -157,7 +154,7 @@ h1 {
 .controls {
 }
 
-.start_pause {
+.start-pause {
   padding: 5px;
 }
 
@@ -165,19 +162,13 @@ h1 {
   padding: 5px;
 }
 
-.display {
-  padding: 5px;
-}
-
 .timer {
-  padding: 5px;
 }
 
 .counter {
-  padding: 5px;
 }
 
-.content_container {
+.content-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,21 +176,38 @@ h1 {
   width: 80vw;
   margin: auto;
 }
-.HUD_container {
-  display: flex;
+.display-container {
+  display: inline-flex;
+  padding: 5px;
+}
+.display-container input {
+  padding: 5px;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: 2px solid black;
+  margin: 5px;
+  box-sizing: border-box;
 }
 
-.game_frame {
+.game-frame {
   height: 70vh;
   width: 100%;
   background: #9ed691;
+}
+.HUD-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
 }
 .egg {
   aspect-ratio: 2/3;
   width: 2%;
   border-radius: 60% 60% 50% 50%;
 }
-
 .choco {
   background-color: chocolate;
 }
@@ -207,5 +215,6 @@ h1 {
   background-color: gold;
 }
 
-.cracked {
+.poisoned {
+  background: red;
 }
